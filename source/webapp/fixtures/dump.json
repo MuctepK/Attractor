@@ -1,0 +1,65 @@
+[
+{
+  "model": "webapp.task",
+  "pk": 1,
+  "fields": {
+    "status": "done",
+    "description": "\u0412\u044b\u0431\u0440\u043e\u0441\u0438\u0442\u044c \u043c\u0443\u0441\u043e\u0440",
+    "execution_date": "2019-08-12"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 2,
+  "fields": {
+    "status": "new",
+    "description": "\u0417\u0430\u043a\u043e\u043d\u0447\u0438\u0442\u044c \u043f\u0440\u043e\u0435\u043a\u0442",
+    "execution_date": null
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 3,
+  "fields": {
+    "status": "in_progress",
+    "description": "\u041d\u0430\u0431\u0440\u0430\u0442\u044c \u043c\u0430\u0441\u0441\u0443",
+    "execution_date": null
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 5,
+  "fields": {
+    "status": "new",
+    "description": "\u041d\u0430\u0439\u0442\u0438 \u0440\u0430\u0431\u043e\u0442\u0443",
+    "execution_date": "2019-12-09"
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 13,
+  "fields": {
+    "status": "in_progress",
+    "description": "Test",
+    "execution_date": "2019-09-06"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$fn0H97QUUgie$scWgxHnXMxFeiLfsRpGaqENCkWiVz+dORkRyRd9p//k=",
+    "last_login": "2019-09-06T10:05:14.014Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-06T08:04:59.973Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

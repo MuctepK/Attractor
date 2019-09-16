@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block menu %}
+    <li><a href="{% url 'task_create' %}">Создать задачу</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Список заданий</h1>
+    {% for task in tasks %}
+        <div class="task">
+        <hr/>
+            <h3>{{ task.description }}</h3>
+            <div class = "task_footer">
+                {% for choice in status_choices %}
+                    {% if choice.0 == task.status %}
+                        <p>Статус: {{ choice.1 }}</p>
+                    {% endif %}
+                {% endfor %}
+                <p>Дата выполнения: {{ task.execution_date|date:'Y-m-d' }}</p>
+            </div>
+            <div class ="d-flex justify-content-between">
+                <a class="btn btn-primary" href="{%url 'task_update' task.pk %}">Изменить эту задачу</a>
+                <a class="btn btn-info" href="{%url 'task_view' task.pk %}">Посмотреть на эту задачу</a>
+                <a class="btn btn-danger" href="{%url 'task_delete' task.pk %}">Удалить эту задачу</a>
+            </div>
+            <hr/>
+        </div>
+    {% endfor %}
+{% endblock %}

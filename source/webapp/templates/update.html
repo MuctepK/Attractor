@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    Обновить задачу
+{% endblock %}
+{% block menu %}
+    <li><a href="{% url 'task_view' task.pk %}">Посмотреть на задачу</a></li>
+{% endblock %}
+{% block content %}
+     <form method="POST" action ="{% url 'task_update' task.pk %}">
+    {% include 'partial/task_form.html' with button_text='Изменить'%}
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Задача
+{% endblock %}
+{% block content %}
+    <h3>{{  task.description}}</h3>
+    <p>{{task.full_description}}</p>
+    <div class = "task_footer">
+        {% for choice in status_choices %}
+            {% if choice.0 == task.status %}
+                <p>Статус: {{ choice.1 }}</p>
+            {% endif %}
+        {% endfor %}
+        <p>Дата выполнения: {{ task.execution_date }}</p>
+    </div>
+{% endblock %}

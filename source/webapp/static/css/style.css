@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+
+.navbar {
+    display: block;
+    background: #6a7dff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+.menu {
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin:0 auto;
+}
+.task_footer{
+    margin:1rem 0;
+    display:flex;
+    justify-items: center;
+    justify-content: space-between;
+
+}
+.form-block{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.form-error {
+    color: red;
+    font-size: 12px;
+    margin: 5px 0 0 0
+}
+.field-error {
+    border: solid 1px red;
+    box-shadow: red 0 0 3px;
+}
+.btn-default {
+    background: gray;
+}
+
+.btn-default:hover {
+    box-shadow: rgba(128, 128, 128, 0.8) 0 0 5px;
+}
+
+.btn-primary {
+    background: dodgerblue;
+}
+
+.btn-primary:hover {
+    box-shadow: rgba(30, 144, 255, 0.8) 0 0 5px;
+}
+
+.btn-danger {
+    background: red;
+}
+
+.btn-danger:hover {
+    box-shadow: rgba(255, 0, 0, 0.8) 0 0 5px;
+}
