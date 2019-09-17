@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Удалить задачи{% endblock %}
+{% block content %}
+    <h3>Вы уверены что хотите удалить?</h3>
+    <form method="POST" action="{% url "task_delete_selected" %}" class="text-center">
+        {% csrf_token %}
+        {% for task in tasks %}
+            <h2> <input type="checkbox" name="tasks" checked value="{{ task.pk }}">{{task}}</h2>
+        {% endfor %}
+        <input type="submit" value="Подвердить" class="mt-5 btn btn-danger">
+        <p><a href="{% url 'index'%}" class="mt-5 btn btn-default">Отмена</a></p>
+    </form>
+{% endblock %}
