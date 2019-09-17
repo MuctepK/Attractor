@@ -4,10 +4,15 @@
 {% endblock %}
 {% block content %}
     <h1>Список заданий</h1>
+    <form action="{% url 'task_delete_selected' %}">
+
     {% for task in tasks %}
         <div class="task">
+        
         <hr/>
-            <h3>{{ task.description }}</h3>
+            <h3>
+                <input type="checkbox" name="tasks" value="{{ task.pk }}">
+                {{ task.description }}</h3>
             <div class = "task_footer">
                 {% for choice in status_choices %}
                     {% if choice.0 == task.status %}
@@ -24,4 +29,6 @@
             <hr/>
         </div>
     {% endfor %}
+        <input type="submit" value="Удалить выбранные задачи" class="delete_all btn btn-danger">
+    </form>
 {% endblock %}

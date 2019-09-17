@@ -55,11 +55,28 @@ h1, h2, h3 {
     justify-content: space-between;
 
 }
+input[type=checkbox]{
+    transform: scale(1.2);
+}
+h3 input[type=checkbox]{
+    float: left;
+}
+h2 input[type=checkbox]{
+    margin-right:50px;
+}
+.mt-5{
+    margin:50px 0 0 0;
+}
+
 .form-block{
     margin-top:20px;
     display:flex;
     flex-direction: column;
     align-items:center;
+}
+.form-control{
+    display:flex;
+    flex-direction:row;
 }
 .form-error {
     color: red;
@@ -92,4 +109,8 @@ h1, h2, h3 {
 
 .btn-danger:hover {
     box-shadow: rgba(255, 0, 0, 0.8) 0 0 5px;
+}
+.delete_all{
+    display:block;
+    margin:5rem auto;
 }

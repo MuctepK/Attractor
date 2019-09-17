@@ -37,6 +37,19 @@ def task_delete_view(request, pk):
         return redirect('index')
 
 
+def task_delete_selected_view(request):
+    if request.method == 'GET':
+        pks = request.GET.getlist('tasks')
+        tasks = [get_object_or_404(Task, pk=pk) for pk in pks]
+        return render(request, 'delete_selected.html', context={'tasks':tasks})
+    elif request.method == 'POST':
+        pks = request.POST.getlist('tasks')
+        tasks = [get_object_or_404(Task, pk=pk) for pk in pks]
+        for task in tasks:
+            task.delete()
+        return redirect('index')
+
+
 def task_update_view(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == 'GET':
